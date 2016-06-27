@@ -18,3 +18,4 @@ hs_err_pid*
 .idea/vcs.xml
 
 node_modules/
+target/
