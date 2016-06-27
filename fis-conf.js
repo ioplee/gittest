@@ -20,9 +20,9 @@ fis.hook('commonjs', {
 fis.match('*', {
     deploy: fis.plugin('local-deliver', {
         //to: '/usr/local/Cellar/tomcat/8.0.35/libexec/webapps/school'
-        to :'/Users/robin/git/projects/school/target'
+        to :'/Users/robin/git/projects/g/target'
     })
-})
+});
 
 /*************************目录规范*****************************/
 
@@ -58,7 +58,7 @@ fis.match('{/assets/scripts/**, /assets/vendors/**}', {
 // ------ 配置assets
 fis.match('/assets/(**)', {
     release: '${project.static}/$1'
-})
+});
 // 配置css
 fis.match('/assets/(styles/**.scss)', {
     release: '${project.static}/$1'
