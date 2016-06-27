@@ -20,7 +20,7 @@ fis.hook('commonjs', {
 fis.match('*', {
     deploy: fis.plugin('local-deliver', {
         //to: '/usr/local/Cellar/tomcat/8.0.35/libexec/webapps/school'
-        to :'/Users/robin/git/projects/school/target'
+        to :'/Users/robin/git/projects/school/target/out'
     })
 })
 
