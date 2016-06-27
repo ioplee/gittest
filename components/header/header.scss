@@ -1,0 +1,128 @@
+/**
+ *  @decription 整站公用头部
+ */
+.header{
+    @include clearfix;
+    height: 50px;
+
+    background-color: #2a4795;
+    color: #fff;
+}
+
+.header-menu{
+    float: right;
+    padding-right: 20px;
+
+    .menu__item{
+        position: relative;
+        float: left;
+    }
+    .menu__item_toggle{
+        background-color: #4663a8;
+
+        .menu-sublist{
+            display: block;
+        }
+
+        .fa-angle-down{
+            transform: rotate(180deg);
+        }
+    }
+    .menu-link{
+        display: block;
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+        line-height: 50px;
+
+        color: #fff;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    .menu-sublist{
+        display: none;
+
+        position: absolute;
+        right: -1px;
+        top: 100%;
+
+        width: 130px;
+
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        border-top: 0 none;
+        box-shadow: 1px 1px 8px rgba(0,0,0,0.2);
+
+        font-size: 12px;
+    }
+    .sublist__item{
+
+    }
+    .sublist-link{
+        display: block;
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+        background-color: #fff;
+        color: #666;
+
+        line-height: 36px;
+
+        &:hover{
+            background-color: #eee;
+
+            text-decoration: none;
+        }
+    }
+}
+
+.header-logo{
+    float: left;
+
+    width: 180px;
+    height: 50px;
+    overflow: hidden;
+
+    background-color: #223A73;
+    border-right: 1px solid #314F99;
+
+    line-height: 0;
+    text-align: center;
+
+    .logo__img{
+    }
+}
+
+.header-nav{
+    float: left;
+
+    .nav__item{
+        position: relative;
+        float: left;
+    }
+    .nav__item_active{
+        @extend .nav__item;
+
+        background-color: #4663a8;
+    }
+    .nav-link{
+        display: block;
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+        line-height: 50px;
+
+        color: #fff;
+
+        &:hover{
+            background-color: #4663a8;
+
+            text-decoration: none;
+        }
+    }
+}

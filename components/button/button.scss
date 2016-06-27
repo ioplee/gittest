@@ -1,0 +1,181 @@
+/**
+ *  @decription 公用按钮
+ */
+
+// Mixins
+// -----------------------------------------------------------------------------
+%ui-button-base {
+    display: inline-block;
+    *display: inline;
+
+    border-style: solid;
+    border-width: 1px;
+
+    font-family: inherit; /* Correct font family not being inherited in all browsers for <button> <input> */
+    font-weight: $btn-font-weight;
+
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+
+    *zoom: 1;
+    *overflow: visible; /* for a ie6/7 bug http://blog.csdn.net/jyy_12/article/details/6636099 */
+    background-image: none; /* for old alice button style conflict */
+    user-select: none;
+    outline: none;
+
+    &:hover, &:focus{
+        text-decoration: none;
+    }
+}
+
+// Button sizes
+@mixin button-size($_padding-vertical, $_padding-horizontal, $_font-size, $_line-height, $_border-radius) {
+    padding: $_padding-vertical $_padding-horizontal;
+    font-size: $_font-size;
+    line-height: $_line-height;
+    border-radius: $_border-radius;
+}
+
+@mixin button-generator($_background-color, $_color, $_border-color){
+    @extend %ui-button-base;
+
+    color: $_color;
+    background-color: $_background-color;
+    border-color: $_border-color;
+
+    @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+
+    &:focus,
+    &.focus {
+        color: $_color;
+        background-color: darken($_background-color, 10%);
+        border-color: darken($_border-color, 25%);
+    }
+    &:hover {
+        color: $_color;
+        background-color: darken($_background-color, 10%);
+        border-color: darken($_border-color, 12%);
+    }
+    &:active,
+    &.active{
+        color: $_color;
+        background-color: darken($_background-color, 10%);
+        border-color: darken($_border-color, 12%);
+
+        &:hover,
+        &:focus,
+        &.focus {
+            color: $_color;
+            background-color: darken($_background-color, 17%);
+            border-color: darken($_border-color, 25%);
+        }
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+
+        color: lighten($_color, 26.18%);
+        background-color: lighten($_background-color, 6.18%);
+        border-color: lighten($_border-color, 6.18%);
+
+        cursor: not-allowed;
+        pointer-events: none;
+
+        &:hover,
+        &:focus,
+        &.focus {
+            color: lighten($_color, 26.18%);
+            background-color: lighten($_background-color, 6.18%);
+            border-color: lighten($_border-color, 6.18%);
+        }
+    }
+
+    // Vertically space out multiple block buttons
+    & + &{
+        margin-left: 5px;
+    }
+
+}
+
+.ui-button{
+    @include button-generator($btn-default-bg, $btn-default-color, $btn-default-border);
+}
+.ui-button-primary{
+    @include button-generator($btn-primary-bg, $btn-primary-color, $btn-primary-border);
+}
+.ui-button-success{
+    @include button-generator($btn-success-bg, $btn-success-color, $btn-success-border);
+}
+.ui-button-info{
+    @include button-generator($btn-info-bg, $btn-info-color, $btn-info-border);
+}
+.ui-button-warning{
+    @include button-generator($btn-warning-bg, $btn-warning-color, $btn-warning-border);
+}
+.ui-button-danger{
+    @include button-generator($btn-danger-bg, $btn-danger-color, $btn-danger-border);
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.ui-button-lg {
+    // line-height: ensure even-numbered height of button next to large input
+    @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
+}
+.ui-button-sm {
+    // line-height: ensure proper height of button next to small input
+    @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+}
+.ui-button-xs {
+    @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.ui-button-block {
+    display: block;
+    width: 100%;
+
+    // Specificity overrides
+    input[type="submit"] &,
+    input[type="reset"] &,
+    input[type="button"] &{
+        width: 100%;
+    }
+}
+
+
+.ui-button-switcher{
+    @include clearfix;
+    display: inline-block;
+
+    .switcher__btn{
+        @include button-generator($btn-default-bg, $btn-default-color, $btn-default-border);
+        @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+
+        float: left;
+        margin-right: -1px;
+
+        border-radius: 0;
+
+        &:first-child{
+            border-top-left-radius: $btn-border-radius-small;
+            border-bottom-left-radius: $btn-border-radius-small;
+        }
+
+        &:last-child{
+            border-top-right-radius: $btn-border-radius-small;
+            border-bottom-right-radius: $btn-border-radius-small;
+        }
+
+        &.actived{
+            @include button-generator($btn-primary-bg, $btn-primary-color, $btn-primary-border);
+            @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+        }
+    }
+}

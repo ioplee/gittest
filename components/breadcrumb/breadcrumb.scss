@@ -1,0 +1,28 @@
+/**
+ *  @decription 整站公用面包屑导航
+ */
+.breadcrumb{
+    padding-left: 20px;
+    padding-right: 20px;
+
+    background-color: #fff;
+
+    line-height: 48px;
+
+    .breadcrumb-link{
+        color: #333;
+    }
+    .breadcrumb-split{
+        margin-left: 2px;
+        margin-right: 2px;
+
+        color: #aaa;
+
+        font-size: 12px;
+    }
+    .breadcrumb-active{
+        color: #888;
+
+        font-size: 12px;
+    }
+}

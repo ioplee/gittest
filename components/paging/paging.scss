@@ -1,0 +1,103 @@
+//
+.ui-paging{
+    @include clearfix;
+
+    %paging-btn{
+        display: inline-block;
+        *display: inline;
+
+        padding: $padding-small-vertical*.618 $padding-small-horizontal;
+        margin-left: 5px;
+
+        color: $paging-btn-color;
+        background-color: $paging-btn-background-color;
+        border: 1px solid $paging-btn-border-color;
+
+        font-family: inherit; /* Correct font family not being inherited in all browsers for <button> <input> */
+
+        font-size: $font-size-small;
+        line-height: $line-height-small;
+        border-radius: $btn-border-radius-small;
+
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        cursor: pointer;
+
+        *zoom: 1;
+        *overflow: visible; /* for a ie6/7 bug http://blog.csdn.net/jyy_12/article/details/6636099 */
+        background-image: none; /* for old alice button style conflict */
+        user-select: none;
+        outline: none;
+
+        &:focus,
+        &.focus {
+            color: $paging-btn-color;
+            background-color: darken($paging-btn-background-color, 10%);
+            border-color: darken($paging-btn-border-color, 25%);
+        }
+        &:hover {
+            color: $paging-btn-color;
+            background-color: darken($paging-btn-background-color, 10%);
+            border-color: darken($paging-btn-border-color, 12%);
+            text-decoration: none;
+        }
+        &:active,
+        &.active{
+            color: $paging-btn-color;
+            background-color: darken($paging-btn-background-color, 10%);
+            border-color: darken($paging-btn-border-color, 12%);
+
+            &:hover,
+            &:focus,
+            &.focus {
+                color: $paging-btn-color;
+                background-color: darken($paging-btn-background-color, 17%);
+                border-color: darken($paging-btn-border-color, 25%);
+            }
+        }
+        &.disabled,
+        &[disabled],
+        fieldset[disabled] & {
+            color: #c0c0c0;
+            background-color: #f0f0f0;
+            border-color: #e0e0e0;
+            // color: lighten($paging-btn-color, 26.18%);
+            // background-color: lighten($paging-btn-background-color, 6.18%);
+            // border-color: lighten($paging-btn-border-color, 6.18%);
+
+            cursor: not-allowed;
+            pointer-events: none;
+
+            &:hover,
+            &:focus,
+            &.focus {
+                color: #c0c0c0;
+                background-color: #f0f0f0;
+                border-color: #e0e0e0;
+                // color: lighten($paging-btn-color, 26.18%);
+                // background-color: lighten($paging-btn-background-color, 6.18%);
+                // border-color: lighten($paging-btn-border-color, 6.18%);
+            }
+        }
+    }
+
+    .paging-info{
+        margin-right: 5px;
+
+        color: $gray-light;
+
+        font-size: 12px;
+    }
+
+    .paging-btn{
+        @extend %paging-btn;
+    }
+    .paging-btn__prev{
+        @extend %paging-btn;
+    }
+    .paging-btn__next{
+        @extend %paging-btn;
+    }
+}
+

@@ -1,0 +1,134 @@
+<div class="sidebar">
+    <ul class="sidebar-menu" id="sidebar_menu">
+        <li class="menu__item" data-menu="dashboard">
+            <a href="/school/route/dashboard" class="menu-link"><i class="menu-link__icon fa fa-dashboard"></i>&nbsp;总控制台</a>
+        </li>
+        <li class="menu__item" data-menu="controller">
+            <a href="javascript:void(0);" class="menu-link J_menu_toggle"><i class="menu-link__icon fa fa-cloud"></i>&nbsp;智能控制<i class="fa fa-caret-down"></i></a>
+            <ol class="menu-sublist">
+                <li class="sublist__item" data-submenu="building">
+                    <a href="/school/route/controller/building/plug" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;楼宇控制</a>
+                </li>
+                <li class="sublist__item" data-submenu="floor">
+                    <a href="/school/route/controller/floor/plug" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;楼层控制</a>
+                </li>
+                <li class="sublist__item" data-submenu="room">
+                    <a href="/school/route/controller/room/list" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;房间控制</a>
+                </li>
+            </ol>
+        </li>
+        <li class="menu__item" data-menu="alam">
+            <a href="javascript:void(0);" class="menu-link J_menu_toggle"><i class="menu-link__icon fa fa-shield"></i>&nbsp;智能告警<i class="fa fa-caret-down"></i></a>
+            <ol class="menu-sublist">
+                <li class="sublist__item" data-submenu="level">
+                    <a href="/school/route/alam/level" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;告警设置</a>
+                </li>
+                <li class="sublist__item" data-submenu="list">
+                    <a href="/school/route/alam/list" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;告警信息</a>
+                </li>
+            </ol>
+        </li>
+        <li class="menu__item" data-menu="smarty">
+            <a href="javascript:void(0);" class="menu-link J_menu_toggle"><i class="menu-link__icon fa fa-check-square-o"></i>&nbsp;评分考勤<i class="fa fa-caret-down"></i></a>
+            <ol class="menu-sublist">
+                <li class="sublist__item" data-submenu="today">
+                    <a href="/school/route/attendence/today" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;今日考勤</a>
+                </li>
+                <li class="sublist__item" data-submenu="list">
+                    <a href="/school/route/attendence/list" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;历史考勤</a>
+                </li>
+                <li class="sublist__item" data-submenu="grade">
+                    <a href="/school/route/grade/list" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;寝室评分</a>
+                </li>
+                <li class="sublist__item" data-submenu="leave">
+                    <a href="/school/route/attendence/leave" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;请假管理</a>
+                </li>
+            </ol>
+        </li>
+        <li class="menu__item" data-menu="message">
+            <a href="javascript:void(0);" class="menu-link J_menu_toggle"><i class="menu-link__icon fa fa-inbox"></i>&nbsp;短信管理<i class="fa fa-caret-down"></i></a>
+            <ol class="menu-sublist">
+                <li class="sublist__item" data-submenu="list">
+                    <a href="/school/route/message/list" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;发件箱</a>
+                </li>
+                <li class="sublist__item" data-submenu="new">
+                    <a href="/school/route/message/new" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;新信息</a>
+                </li>
+                <li class="sublist__item" data-submenu="contact">
+                    <a href="/school/route/message/contact_list" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;短信群组</a>
+                </li>
+            </ol>
+        </li>
+        <li class="menu__item" data-menu="statistics">
+            <a href="javascript:void(0);" class="menu-link J_menu_toggle"><i class="menu-link__icon fa fa-line-chart"></i>&nbsp;综合报表<i class="fa fa-caret-down"></i></a>
+            <ol class="menu-sublist">
+                <li class="sublist__item" data-submenu="lights">
+                    <a href="/school/route/statistics/lightsOutRankingMore" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;熄灯统计</a>
+                </li>
+                <li class="sublist__item" data-submenu="electric">
+                    <a href="/school/route/statistics/ElectricRankingMore" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;能耗统计</a>
+                </li>
+                <li class="sublist__item" data-submenu="attendence">
+                    <a href="/school/route/statistics/attendence" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;考勤统计</a>
+                </li>
+                <li class="sublist__item" data-submenu="grade">
+                    <a href="/school/route/statistics/grade" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;评分统计</a>
+                </li>
+            </ol>
+        </li>
+        <li class="menu__item" data-menu="operation">
+            <a href="javascript:void(0);" class="menu-link J_menu_toggle"><i class="menu-link__icon fa fa-database"></i>&nbsp;运维管理<i class="fa fa-caret-down"></i></a>
+            <ol class="menu-sublist">
+                <li class="sublist__item" data-submenu="gateway">
+                    <a href="/school/route/operation/gateway" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;网关管理</a>
+                </li>
+                <li class="sublist__item" data-submenu="node">
+                    <a href="/school/route/operation/node" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;节点管理</a>
+                </li>
+                <li class="sublist__item" data-submenu="device">
+                    <a href="/school/route/operation/device" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;设备管理</a>
+                </li>
+            </ol>
+        </li>
+        <li class="menu__item" data-menu="baseinfo">
+            <a href="javascript:void(0);" class="menu-link J_menu_toggle"><i class="menu-link__icon fa fa-gears"></i>&nbsp;基础配置<i class="fa fa-caret-down"></i></a>
+            <ol class="menu-sublist">
+                <li class="sublist__item" data-submenu="building">
+                    <a href="/school/route/baseinfo/building" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;楼宇</a>
+                </li>
+                <li class="sublist__item" data-submenu="floor">
+                    <a href="/school/route/baseinfo/floor" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;楼层</a>
+                </li>
+                <li class="sublist__item" data-submenu="room">
+                    <a href="/school/route/baseinfo/room" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;房间</a>
+                </li>
+                <li class="sublist__item" data-submenu="bed">
+                    <a href="/school/route/baseinfo/bed" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;床铺</a>
+                </li>
+                <li class="sublist__item" data-submenu="class">
+                    <a href="/school/route/baseinfo/class" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;班级</a>
+                </li>
+                <li class="sublist__item" data-submenu="student">
+                    <a href="/school/route/baseinfo/student" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;学生</a>
+                </li>
+                <li class="sublist__item" data-submenu="lights">
+                    <a href="/school/route/baseinfo/lights" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;熄灯规则</a>
+                </li>
+                <li class="sublist__item" data-submenu="grade">
+                    <a href="/school/route/grade/rule" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;评分规则</a>
+                </li>
+            </ol>
+        </li>
+        <li class="menu__item" data-menu="administration">
+            <a href="javascript:void(0);" class="menu-link J_menu_toggle"><i class="menu-link__icon fa fa-user-secret"></i>&nbsp;权限管理<i class="fa fa-caret-down"></i></a>
+            <ol class="menu-sublist">
+                <li class="sublist__item" data-submenu="user">
+                    <a href="/school/route/administration/user" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;用户管理</a>
+                </li>
+                <li class="sublist__item" data-submenu="role">
+                    <a href="/school/route/administration/role" class="sublist-link"><i class="fa fa-angle-double-right"></i>&nbsp;角色管理</a>
+                </li>
+            </ol>
+        </li>
+    </ul>
+</div>

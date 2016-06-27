@@ -1,0 +1,97 @@
+/**
+ *  @decription 整站公用左侧边栏菜单
+ */
+.sidebar{
+    background-color: #d0daf3;
+    color: #2c4a93;
+}
+
+.sidebar-menu{
+    line-height: 36px;
+
+    .menu__item{
+        border-bottom: 1px dashed darken(#B9C7E9, 1.618%);
+        font-size: 16px;
+    }
+    .menu-link{
+        @include clearfix;
+        display: block;
+
+        padding-left: 18px;
+        padding-right: 20px;
+
+        color: #2c4a93;
+        border-left: 3px solid transparent;
+
+        line-height: 48px;
+
+        &:hover{
+            background-color: darken(#B9C7E9, 3.18%);
+            color: darken(#2c4a93, 6.18%);
+
+            text-decoration: none;
+        }
+
+        .fa-caret-down{
+            margin-left: 10px;
+        }
+    }
+    .menu-link__icon{
+        width: 16px;
+        text-align: center;
+    }
+    .menu__item_toggle{
+        background-color: #B9C7E9;
+
+        .menu-link{
+            background-color: darken(#B9C7E9, 3.18%);
+        }
+
+        .menu-sublist{
+            display: block;
+        }
+
+        .fa-angle-down{
+            transform: rotate(180deg);
+        }
+    }
+    .menu__item_active{
+        background-color: darken(#B9C7E9, 6.18%);
+
+        .menu-link{
+            border-left-color: #249cfa;
+        }
+    }
+
+    .menu-sublist{
+        display: none;
+
+        font-size: 14px;
+    }
+    .sublist__item{
+        border-left: 3px solid #b9c7e9;
+    }
+    .sublist__item_active{
+        @extend .sublist__item;
+        background-color: #9eb2e3;
+        border-color: #249cfa;
+
+        .sublist-link{
+            color: #2c4a93;
+        }
+    }
+    .sublist-link{
+        display: block;
+
+        padding-left: 35px;
+        padding-right: 10px;
+
+        color: lighten(#2c4a93, 20%);
+
+        &:hover{
+            color: #2c4a93;
+
+            text-decoration: none;
+        }
+    }
+}

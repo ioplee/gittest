@@ -1,0 +1,82 @@
+//
+.ui-input{
+
+    padding: 6px 9px 5px;
+
+    background: $form-text-background-color none;
+    border: 1px solid $form-text-border-color;
+    color: $form-text-color;
+
+    border-radius: 3px;
+
+    font-size: 12px;
+
+    height: 17px\0;
+
+    &.hover,
+    &:hover{
+        background-color: #fff;
+        border-color: darken($form-text-border-color, 12%);
+    }
+    &.focus,
+    &:focus{
+        background-color: #fff;
+        // border-color: darken($form-text-border-color, 25%);
+        outline: 0
+    }
+    &.disabled,
+    &[disabled]{
+        color: lighten($form-text-color, 6.18%);
+        background-color: lighten($form-text-background-color, 6.18%);
+        border-color: lighten($form-text-border-color, 6.18%);
+    }
+}
+
+.form-group{
+    @include clearfix;
+    margin-bottom: 10px;
+    min-width: 300px;
+
+    .group__label{
+        float: left;
+        margin-top: 5px;
+        min-width: 80px;
+        padding-right: 10px;
+        text-align: right;
+    }
+
+    .group__control{
+    }
+    .group__text{
+        display: inline-block;
+        padding-top: 5px;
+    }
+
+    .group__select{
+        min-width: 100px;
+
+        background: $form-text-background-color none;
+        border: 1px solid $form-text-border-color;
+        color: $form-text-color;
+
+        border-radius: 0;
+
+        font-size: 12px;
+
+        height: 28px;
+        line-height: 28px;
+    }
+
+    .group__checkbox{
+        margin-right: 10px;
+        line-height: 28px;
+
+        .checkbox__ipt{
+            margin-right: 2px;
+        }
+    }
+
+    .error{
+        color: $brand-danger;
+    }
+}

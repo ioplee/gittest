@@ -1,0 +1,128 @@
+<div class="ui-table-container">
+    <div class="ui-table-toolbar">
+        <a href="javascript:void(0);" class="ui-button ui-button-sm fn-right" title="刷新"><i class="fa fa-refresh"></i>&nbsp;刷新</a>
+        <div class="ui-select">
+            <div class="select-text"><i class="select-text__arrow fa fa-angle-down"></i>xxxxx</div>
+            <ul class="select-option">
+                <li class="option__item">no1no1no1no1no1no1</li>
+                <li class="option__item">no2</li>
+                <li class="option__item">no3</li>
+                <li class="option__item">no4</li>
+            </ul>
+        </div>
+        <h5 class="toolbar__title">信息总览</h5>
+    </div>
+    <table class="ui-table">
+        <thead>
+        <tr>
+            <th>创建时间</th>
+            <th>名称<em class="ft-bar">|</em>交易号</th>
+            <th>对方</th>
+            <th>金额<em class="ft-bar">|</em>明细</th>
+            <th>状态</th>
+            <th>操作</th>
+            <th>备注</th>
+        </tr>
+        </thead><!-- 表头可选 -->
+        <tbody>
+        <tr>
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+            <td class="ui-table-action">Data</td>
+            <td>Data</td>
+        </tr>
+        <tr class="ui-table-split">
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+            <td class="ui-table-action">Data</td>
+            <td>Data</td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <div class="cell__placeholder">
+                    <i class="fa fa-spinner fa-spin"></i>&nbsp;数据加载中...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <div class="cell__placeholder error">
+                    <i class="fa fa-info-circle"></i>&nbsp;数据加载失败，<a href="javascript:void(0);" class="placeholder-link">请再试一次</a>！
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+// // 绑定删除事件
+// $content.on('click.delete', 'a.J_btn_delete', function(){
+//     var building_no = $(this).data('building-no');
+
+//     var delete_handler = null;
+//     ArtDialog({
+//         'skin': 'dialog-confirm',
+//         'title': '删除确认',
+//         'content': '<p class="confirm-cnt">您是否需要删除此楼宇信息？</p>',
+//         'modal': true,
+//         'okValue': "删除",
+//         'ok': function(){
+//             var dialog = this;
+
+//             if(delete_handler!==null){
+//                 return false;
+//             }
+//             dialog.title('正在提交...');
+//             var delete_params = {
+//                 bizType: 'building',
+//                 building_no: building_no
+//             };
+//             delete_handler = $.post('/school/V1/BaseDataInfoService/_modifyRecord', delete_params).done(function(_data, _status, _xhr){
+//                 if(parseInt(_data['code'], 10)===0){
+//                     delete_item(building_no);
+//                     dialog.title('删除成功');
+//                     dialog.statusbar([
+//                         '<div class="dialog-form-tip success">',
+//                             '<i class="fa fa-check-circle"></i>&nbsp;删除成功！',
+//                         '</div>'
+//                     ].join(''));
+//                     dialog.button([
+//                         {
+//                             value: '关闭',
+//                             autofocus: true
+//                         }
+//                     ]);
+//                 }else{
+//                     dialog.title('删除确认');
+//                     dialog.statusbar([
+//                         '<div class="dialog-form-tip danger">',
+//                             '<i class="fa fa-info-circle"></i>&nbsp;',
+//                             _data['msg'],
+//                         '</div>'
+//                     ].join(''));
+//                 }
+//             }).fail(function(_xhr, _status, _error) {
+//                 dialog.title('删除确认');
+//                 dialog.statusbar([
+//                     '<div class="dialog-form-tip danger">',
+//                         '<i class="fa fa-info-circle"></i>&nbsp;网络异常，请再试一次',
+//                     '</div>'
+//                 ].join(''));
+//             }).always(function(_data, _status, _error) {
+//                 delete_handler.abort();
+//                 delete_handler = null;
+//             });
+//             return false;
+//         },
+//         'cancelValue': "取消",
+//         'cancel': true
+//     }).show();
+// });
+</script>

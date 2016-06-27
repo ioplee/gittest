@@ -1,0 +1,99 @@
+
+.ui-search{
+    @include clearfix;
+    display: inline-block;
+
+    .search-label{
+        float: left;
+        margin-top: 6px;
+    }
+
+    .search__item{
+        float: left;
+        margin-right: 10px;
+
+        width: auto;
+    }
+
+    .ui-form-select{
+        background: $form-text-background-color none;
+        border: 1px solid $form-text-border-color;
+        color: $form-text-color;
+
+        border-radius: 0;
+
+        font-size: 12px;
+
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .search-date{
+        width: 85px;
+    }
+}
+
+
+.ui-search-group{
+    @include clearfix;
+    display: inline-block;
+
+    .search-label{
+        float: left;
+        margin-top: 6px;
+    }
+
+    .search__item{
+        position: relative;
+        float: left;
+
+        margin-left: -1px;
+
+        border-radius: 0;
+
+        .select-text{
+            border-radius: 0;
+        }
+    }
+
+    .search__item_first{
+        float: left;
+
+        border-right-width: 0;
+        border-radius: 3px 0 0 3px;
+
+        .select-text{
+            border-right-width: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        &.ui-input{
+            border-right-width: 1px;
+        }
+
+        .select2-container--default{
+            .select2-selection--single{
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+            }
+
+            &.select2-container--open{
+                .select2-selection--single{
+                    border-bottom-left-radius: 0;
+                }
+            }
+        }
+    }
+    .search__item_last{
+        float: left;
+
+        border-left-width: 0;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .select2-container--default{
+        .select2-selection--single{
+            border-radius: 0;
+        }
+    }
+}

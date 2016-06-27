@@ -1,0 +1,141 @@
+/**
+ *  @decription 公用外框
+ */
+.ui-panel{
+    overflow: hidden;
+
+    margin-bottom: 20px;
+
+    background-color: #fff;
+    border: 1px solid #dce4ea;
+    border-radius: 5px;
+
+    .panel__header{
+        @include clearfix;
+        padding: 5px 20px;
+
+        background-color: #f5f6f7;
+        border-bottom: 1px solid #eee;
+
+        .panel-title{
+            line-height: 26px;
+        }
+
+        .ui-button-sm{
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+    }
+    .panel__body{
+        padding: 20px;
+    }
+    .panel__footer{
+        padding: 5px 20px;
+
+        background-color: #f5f6f7;
+        border-top: 1px solid #eee;
+    }
+    .panel-navigator{
+        @include clearfix;
+        overflow: hidden\0;
+
+        background-color: #f1f5fd;
+        border-bottom: 1px solid #d0daf3;
+
+        font-size: $font-size-h5;
+        text-align: center;
+
+        .navigator__item{
+            position: relative;
+            float: left;
+
+            background-color: transparent;
+            border-right: 1px solid #d0daf3;
+            color: #8ba4e1;
+
+            min-width: 90px;
+            line-height: 40px;
+
+            &:hover{
+                color: #2c4a93;
+                text-decoration: none;
+            }
+
+            &.actived{
+                padding-bottom: 1px;
+                margin-bottom: -1px;
+                background-color: #fff;
+                color: #2c4a93;
+            }
+        }
+    }
+
+    .panel-toolbar{
+        @include clearfix;
+
+        margin-bottom: 20px;
+    }
+    .panel-toolbar-subtab{
+        margin-top: 3px;
+
+        .subtab__item{
+            display: inline-block;
+            padding: 3px 10px;
+
+            color: #2e4c93;
+            border-radius: 3px;
+
+            font-size: 12px;
+
+            &.actived{
+                background-color: lighten(#2e4c93, 16.8%);
+                color: #fff;
+
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.ui-panel_primary{
+    @extend .ui-panel;
+
+    .panel__header{
+        background-color: $brand-primary;
+        color: #fff;
+    }
+}
+.ui-panel_success{
+    @extend .ui-panel;
+
+    .panel__header{
+        background-color: $brand-success;
+        color: #fff;
+    }
+}
+.ui-panel_info{
+    @extend .ui-panel;
+
+    .panel__header{
+        background-color: $brand-info;
+        color: #fff;
+    }
+}
+.ui-panel_warning{
+    @extend .ui-panel;
+
+    .panel__header{
+        background-color: $brand-warning;
+        color: #fff;
+    }
+}
+.ui-panel_danger{
+    @extend .ui-panel;
+
+    .panel__header{
+        background-color: $brand-danger;
+        color: #fff;
+    }
+}
