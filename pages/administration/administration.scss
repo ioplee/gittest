@@ -1,0 +1,22 @@
+// 变量集合
+@import "variables";
+// 工具包
+@import "utility";
+
+.prem-from{
+    .form-group{
+        @include clearfix;
+
+        padding-left: 95px;
+
+        .group__label{
+            float: left;
+            margin-left: -95px;
+        }
+
+        .group__checkbox{
+            display: inline-block;
+        }
+    }
+}
+

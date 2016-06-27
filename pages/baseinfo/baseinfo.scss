@@ -1,0 +1,10 @@
+// 变量集合
+@import "variables";
+// 工具包
+@import "utility";
+
+.datepick-select{
+    .ui-select{
+        width: auto;
+    }
+}

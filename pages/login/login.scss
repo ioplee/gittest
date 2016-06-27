@@ -1,0 +1,117 @@
+// 变量集合
+@import "variables";
+// 工具包
+@import "utility";
+
+// CSS reset
+@import 'base';
+
+// >>> vendors
+// font icon
+@import 'font-awesome/scss/font-awesome.scss';
+
+// components
+@import "button/button.scss";
+
+.ui-container{
+    @include clearfix;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ui-header{
+    width: 100%;
+    height: 50px;
+
+    background-color: #fff;
+    border-bottom: 1px solid darken(#d0daf3, 6.18%);
+    box-shadow: 0 2px 0 #ccc;
+
+    .header-logo{
+        float: left;
+    }
+}
+
+.login-banner{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.login-panel{
+    width: 400px;
+    overflow: hidden;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 40px;
+
+    background-color: #fff;
+    border-radius: 5px;
+
+    .panel__title{
+        text-align: center;
+    }
+    .panel__main{
+
+    }
+}
+.login-form{
+
+    .form-input{
+        padding: 6px 9px 5px;
+
+        background: $form-text-background-color none;
+        border: 1px solid $form-text-border-color;
+        color: $form-text-color;
+
+        border-radius: 3px;
+
+        font-size: 12px;
+
+        height: 17px\0;
+
+        &.hover,
+        &:hover{
+            background-color: #fff;
+            border-color: darken($form-text-border-color, 12%);
+        }
+        &.focus,
+        &:focus{
+            background-color: #fff;
+            // border-color: darken($form-text-border-color, 25%);
+            outline: 0
+        }
+        &.disabled,
+        &[disabled]{
+            color: lighten($form-text-color, 6.18%);
+            background-color: lighten($form-text-background-color, 6.18%);
+            border-color: lighten($form-text-border-color, 6.18%);
+        }
+    }
+    .form__group{
+        @include clearfix;
+
+        .form-label{
+            position: relative;
+            float: left;
+            margin-right: -20px;
+        }
+        .form-input{
+            padding-left: 30px;
+        }
+    }
+    .form-submit{
+
+    }
+}
+
+.ui-footer{
+
+}

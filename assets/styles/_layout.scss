@@ -1,0 +1,23 @@
+.body-container{
+    @include clearfix;
+    padding-left: 180px;
+
+    background-color: #d0daf3;
+
+    .body-container__sidebar{
+        position: relative;
+
+        float: left;
+        margin-left: -180px;
+
+        width: 180px;
+    }
+
+    .body-container__main{
+        background-color: #e3e8f7;
+    }
+
+    .body-content__wrapper{
+        padding: 20px;
+    }
+}

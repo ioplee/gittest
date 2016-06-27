@@ -1,0 +1,15 @@
+{
+  "name": "art-dialog",
+  "homepage": "https://github.com/aui/artDialog",
+  "version": "6.0.4",
+  "_release": "6.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "6.0.4",
+    "commit": "6437d61e8538489f8ed2dc4f408ce82b044df69d"
+  },
+  "_source": "git://github.com/aui/artDialog.git",
+  "_target": "~6.0.4",
+  "_originalSource": "art-dialog",
+  "_direct": true
+}

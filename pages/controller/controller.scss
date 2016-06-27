@@ -1,0 +1,26 @@
+// 变量集合
+@import "variables";
+// 工具包
+@import "utility";
+
+.controller-toolbar-select{
+    width: 150px;
+}
+
+@mixin controller-switcher($background_color, $color){
+    overflow: hidden;
+    padding: 3px;
+
+    background-color: $background_color;
+    border-radius: 50%;
+
+    color: $color;
+}
+.controller-switcher_off{
+    @include controller-switcher($gray-light, #fff);
+}
+.controller-switcher_on{
+    @include controller-switcher($brand-primary, #fff);
+}
+
+

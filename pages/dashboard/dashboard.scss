@@ -1,0 +1,68 @@
+// 工具包
+@import "utility";
+
+.dashboard-table-box{
+    @include clearfix;
+
+    margin-top: 20px;
+
+    .box__item{
+        box-sizing: border-box;
+
+        float: left;
+
+        width: 50%;
+
+        &:first-child{
+            padding-right: 10px;
+        }
+        &:last-child{
+            padding-left: 10px;
+        }
+    }
+
+    .ui-table{
+        .cell__placeholder{
+            padding-top: 65px;
+            padding-bottom: 65px;
+        }
+    }
+}
+
+.dashboard-charts{
+    @include clearfix;
+
+    margin-top: 20px;
+
+    .charts__item{
+        box-sizing: border-box;
+
+        float: left;
+
+        width: 50%;
+
+        &:first-child{
+            padding-right: 10px;
+        }
+        &:last-child{
+            padding-left: 10px;
+        }
+    }
+
+    .chart-box{
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+    }
+    .chart-title{
+        padding: 0 10px;
+
+        background-color: #F6F6F6;
+        border-bottom: 1px solid #ddd;
+
+        line-height: 34px;
+    }
+    .chart-content{
+        padding: 5px;
+    }
+}
